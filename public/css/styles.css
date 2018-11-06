@@ -13,6 +13,10 @@ body {
   max-width: 400px;
 }
 
+.etsy {
+  width: 50%;
+}
+
 .h100 {
   height: calc(100% - 56px);
 }
@@ -46,6 +50,13 @@ body {
   width: 90%;
 }
 
+.link-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 #footer {
   height: 30px;
   background: #333;
@@ -72,16 +83,6 @@ body {
     width: 50% !important;
   }
 
-  .who {
-    float: left;
-    width: 50%;
-  }
-
-  .things {
-    float: left;
-    width: 50%;
-  }
-
   .gallery {
     column-count: 3;
   }
@@ -89,5 +90,9 @@ body {
   .gallery img {
     width: 100%;
     vertical-align: top;
+  }
+
+  .etsy {
+    width: 25%;
   }
 }
