@@ -101,7 +101,7 @@ html {
   }
 
   .gallery {
-    column-count: 3;
+    column-count: 5;
   }
 
   .gallery img {
