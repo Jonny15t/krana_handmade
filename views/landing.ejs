@@ -37,12 +37,14 @@
     <section id="aboutme">
       <div class="p-2 mh100 bg-dark color-fff">
         <div class="d-flex flex-column align-items-center">
-          <h1 data-aos="fade-up">Krana Handmade</h1>
-          <h3 data-aos="fade-right">By Swetha Sriram</h3>
-          <img class="headshot" data-aos="fade-left" src="/img/headshot.jpg">
+          <div data-aos="fade-left" class="text-center">
+            <h1>Krana Handmade</h1>
+            <h3>By Swetha Sriram</h3>
+            <img class="headshot" src="/img/headshot.jpg">
+          </div>
         </div>
-        <div data-aos="flip-right" class="who">
-          <div data-aos="fade-left" class="d-flex flex-column align-items-center w-75 mx-auto">
+        <div class="who">
+          <div class="d-flex flex-column align-items-center w-75 mx-auto">
               <hr class="w-100">
               <h3>Who am I?</h3>
               <hr class="w-100">
@@ -53,7 +55,7 @@
               </p>
             </div>
         </div>
-        <div data-aos="flip-right" class="things">
+        <div class="things">
           <div class="d-flex flex-column align-items-center w-75 mx-auto">
               <hr class="w-100">
               <h3>Things I've Done</h3>
@@ -87,22 +89,9 @@
         </form>
       </div>
     </section>
-    <section id="gallery">
-      <div class="d-flex flex-column mh100 bg-dark">
-        <div class="my-2 mx-auto w-75">
-          <hr>
-          <h3 data-aos="fade-right"  class="text-center color-fff">My Gallery</h3>
-          <hr>
-        </div>
-        <div class="p-2 gallery">
-          <% images.forEach(image => { %>
-              <img data-aos="fade-down" class="pt-2" src="<%= image %>">     
-          <% }) %>
-        </div>
-      </div>
-    </section>
     <section id="etsy">
-        <div data-aos="fade-right" class="w-75 mx-auto my-2">
+      <div class="bg-dark color-fff py-3">
+        <div data-aos="fade-right" class="w-75 mx-auto my-3">
           <hr>
           <h3 class="text-center">Etsy</h3>
           <hr>
@@ -113,6 +102,21 @@
             If you're interested in purchasing any of my work or seeing any projects that are not captured here, please visit my Etsy! Purchases through Etsy are by far the best way to support my passion for creation. Not only do your purchases fund me with the income to source further projects, but they show me just how much you enjoy my products and motivates me to continue to work hard to continue Krana Handmade.
           </p>
         </div>
+      </div>
+    </section>
+    <section id="gallery">
+      <div class="d-flex flex-column mh100">
+        <div class="my-2 mx-auto w-75">
+          <hr>
+          <h3 data-aos="fade-right"  class="text-center">My Gallery</h3>
+          <hr>
+        </div>
+        <div class="p-2 gallery">
+          <% images.forEach(image => { %>
+              <img data-aos="fade-down" class="pt-2" src="<%= image %>">     
+          <% }) %>
+        </div>
+      </div>
     </section>
     <section id="footer">
       <small>Created by Jonathan Small</small>
