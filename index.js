@@ -23,9 +23,8 @@ app.post('/', async (req, res, next) => {
     <h5>Message:</h5>
     <p>${req.body.message}</p>
     `
-
     const email = {
-      to: 'brokensyn779@gmail.com',
+      to: 'swethaly@yahoo.com',
       from: 'mail@kranahandmade.com',
       subject: 'Message from Website',
       html: message,
