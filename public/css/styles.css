@@ -1,3 +1,14 @@
+@font-face {
+  src: url('/webfonts/Quicksand-Regular.ttf');
+  font-family: Quicksand;
+}
+
+@font-face {
+  src: url('/webfonts/Quicksand-Bold.ttf');
+  font-family: Quicksand;
+  font-weight: bold;
+}
+
 body {
   overflow-x: hidden;
 }
