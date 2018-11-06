@@ -9,9 +9,15 @@
   font-weight: bold;
 }
 
+@font-face {
+  src: url('/webfonts/PoiretOne-Regular.ttf');
+  font-family: "Poiret One";
+  font-weight: bold;
+}
+
 body {
   overflow-x: hidden;
-  font-family: Quicksand !important;
+  font-family: Quicksand;
 }
 
 html {
@@ -84,7 +90,9 @@ html {
           flex-direction: column;
 }
 
-.child { width: 100%; }
+.fancy {
+  font-family: Poiret One;
+}
 
 #footer {
   height: 30px;
