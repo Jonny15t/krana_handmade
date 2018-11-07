@@ -1,23 +1,17 @@
 @font-face {
-  src: url('/webfonts/Quicksand-Regular.ttf');
-  font-family: Quicksand;
+  src: url('/webfonts/Exo-Regular.ttf');
+  font-family: Exo;
 }
 
 @font-face {
-  src: url('/webfonts/Quicksand-Bold.ttf');
-  font-family: Quicksand;
-  font-weight: bold;
-}
-
-@font-face {
-  src: url('/webfonts/PoiretOne-Regular.ttf');
-  font-family: "Poiret One";
+  src: url('/webfonts/Exo-Bold.ttf');
+  font-family: Exo;
   font-weight: bold;
 }
 
 body {
   overflow-x: hidden;
-  font-family: Quicksand;
+  font-family: Exo;
 }
 
 html {
@@ -88,10 +82,6 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.fancy {
-  font-family: Poiret One;
 }
 
 #footer {
