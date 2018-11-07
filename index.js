@@ -3,9 +3,9 @@ const express      = require('express'),
       app          = express(),
       PORT         = 8081,
       errorHandler = require('./handlers/errors'),
-      randomPuppy  = require('random-puppy'),
       bodyParser   = require('body-parser'),
-      sgMail = require('@sendgrid/mail');
+      sgMail       = require('@sendgrid/mail'),
+      fs           = require('fs');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -38,20 +38,22 @@ app.post('/', async (req, res, next) => {
 
 // Index Route
 app.get('/', async (req, res, next) => {
-  const getPuppies = async () => {
-    const puppies = []
-    for(i = 0; i < 30; i++) {
-      const puppy = await randomPuppy();
-      puppies.push(puppy);
-    }
-    return puppies
+  try{
+    const images = [];
+    await fs.readdir('./public/img/gallery/', (err, files) => {
+      if (err)
+        next(err)
+      else
+        files.forEach(file => {
+          images.push(`/img/gallery/${file}`);
+        });
+        res.render('landing', {
+          images
+        });
+    })
+  } catch(e) {
+    next(e);
   }
-
-  const puppyList = await getPuppies();
-
-  res.render('landing', {
-    images: puppyList
-  });
 });
 
 // 404 Error Generator
