@@ -29,6 +29,7 @@ app.post('/', async (req, res, next) => {
       subject: 'Message from Website',
       html: message,
     };
+    
     sgMail.send(email);
     res.redirect('/')
   } catch(e) {
