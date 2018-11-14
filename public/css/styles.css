@@ -12,10 +12,12 @@
 body {
   overflow-x: hidden;
   font-family: Exo;
+  height: 100%;
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 .crane {
@@ -36,7 +38,8 @@ html {
 }
 
 .h100 {
-  height: calc(100% - 56px);
+  height: 100%;
+  /* height: calc(100% - 56px); */
 }
 
 .mh100 {
