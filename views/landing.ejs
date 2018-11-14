@@ -34,7 +34,7 @@
         <h3 class="mt-2">Multimedia Art &amp; Jewelry</h3>
       </div>
     </section>
-    <section data-aos="fade-right" id="aboutme" class="mh100">
+    <section id="aboutme" class="mh100">
       <div class="p-2 mh100 bg-dark color-fff">
         <div class="d-flex flex-column align-items-center">
           <h1>Krana Handmade</h1>
@@ -58,7 +58,7 @@
           </p>
         </div>
     </section>
-    <section data-aos="fade-right" id="contactme">
+    <section id="contactme">
       <div class="w-75 mx-auto my-2">
         <hr>
         <h3 class="text-center">Contact Me</h3>
@@ -78,7 +78,7 @@
         </form>
       </div>
     </section>
-    <section data-aos="fade-right" id="etsy" class="mh25">
+    <section id="etsy" class="mh25">
       <div class="bg-dark color-fff py-3">
         <div class="w-75 mx-auto my-3">
           <hr>
@@ -87,8 +87,12 @@
         </div>
         <div class="d-flex flex-column align-items-center w-75 py-3 mx-auto">
           <img class="etsy" src="/img/etsy-logo.jpg">
-          <p class="m-2 text-justify"><strong>What is Etsy?</strong></p>
-          <p class="m-2 text-justify w-100">"Etsy is the global marketplace for unique and creative goods. It’s home to a universe of special, extraordinary items, from unique handcrafted pieces to vintage treasures." - Etsy.com</p>
+          <p class="m-2 text-justify">
+            <strong>What is Etsy?</strong>
+          </p>
+          <p class="m-2 text-justify w-100">
+            "Etsy is the global marketplace for unique and creative goods. It’s home to a universe of special, extraordinary items, from unique handcrafted pieces to vintage treasures." - Etsy.com
+          </p>
           <p class="m-2 text-justify w-100">
             If you're interested in purchasing any of my work or seeing any projects that are not captured here, please visit my Etsy! Purchases through Etsy are by far the best way to support my passion for creation. Not only do your purchases fund me with the income to source further projects, but they show me just how much you enjoy my products and motivates me to continue to work hard to continue Krana Handmade. Should you have any questions about anything you see or any requests for alternate items, please contact me via the form above. Your support is much appreciated and I look forward to sharing my art with you.
           </p>
@@ -105,8 +109,20 @@
         </div>
         <div class="p-2 gallery">
           <% images.forEach(image => { %>
-              <img data-aos="zoom-in" class="pt-2" src="<%= image %>">     
+            <button class="transparent img-modal-btn" data-toggle="modal" data-target="#img-modal" data-src="<%= image %>">
+              <img class="pt-2 lazyload" data-src="<%= image %>">    
+            </button> 
           <% }) %>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="img-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img id="modal-img">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -114,10 +130,11 @@
       <small>Created by Jonathan Small</small>
     </section>
   <script src="/js/lib/jquery-3.3.1.min.js"></script>
+  <script src="/js/lib/lazyload.js"></script>
   <script src="/bootstrap/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="/js/scripts.js"></script>
   <script>
-    AOS.init();
+    lazyload();
   </script>
   </body>
 </html>

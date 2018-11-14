@@ -84,6 +84,24 @@ html {
           flex-direction: column;
 }
 
+.transparent {
+  background: transparent;
+  border: 0;
+}
+
+.transparent:focus {
+  outline: none;
+}
+
+.modal-body {
+  text-align: center;
+  padding: 5px;
+}
+
+.modal-body img {
+  width: 100%;
+}
+
 #footer {
   height: 30px;
   background: #333;
@@ -111,7 +129,7 @@ html {
   }
 
   .gallery {
-    column-count: 5;
+    column-count: 10;
   }
 
   .gallery img {
@@ -120,6 +138,6 @@ html {
   }
 
   .etsy {
-    width: 25%;
+    width: 10%;
   }
 }
