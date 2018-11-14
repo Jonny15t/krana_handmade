@@ -10,6 +10,7 @@ const express      = require('express'),
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
+app.use('/lozad', express.static(__dirname + '/node_modules/lozad/dist'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 // Email Route
