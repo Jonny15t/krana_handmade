@@ -110,12 +110,11 @@
         <div class="p-2 gallery">
           <% images.forEach(image => { %>
             <button class="transparent img-modal-btn" data-toggle="modal" data-target="#img-modal" data-src="<%= image %>">
-              <img class="pt-2 lazyload" data-src="<%= image %>">    
+              <img class="pt-2" src="<%= image %>">    
             </button> 
           <% }) %>
         </div>
       </div>
-      <!-- Modal -->
       <div class="modal fade" id="img-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -130,11 +129,7 @@
       <small>Created by Jonathan Small</small>
     </section>
   <script src="/js/lib/jquery-3.3.1.min.js"></script>
-  <script src="/js/lib/lazyload.js"></script>
   <script src="/bootstrap/js/bootstrap.min.js"></script>
   <script src="/js/scripts.js"></script>
-  <script>
-    lazyload();
-  </script>
   </body>
 </html>

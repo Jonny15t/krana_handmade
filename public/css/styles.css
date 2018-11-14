@@ -96,6 +96,7 @@ html {
 .modal-body {
   text-align: center;
   padding: 5px;
+  height: 100%;
 }
 
 .modal-body img {
@@ -139,5 +140,6 @@ html {
 
   .etsy {
     width: 10%;
+    height: 100%;
   }
 }
