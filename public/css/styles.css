@@ -71,6 +71,10 @@ html {
   width: 90%;
 }
 
+.gallery img:hover {
+  cursor: pointer;
+}
+
 .link-group {
   display: -webkit-box;
   display: -ms-flexbox;
